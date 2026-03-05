@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daurin - Daur Ulang Sampah Plastik</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #222;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    /* Header / Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(248, 248, 248, 0.92); /* hijau agak transparan */
+      backdrop-filter: blur(6px);
+      transition: background-color 0.3s;
+    }
+
+    header.scrolled {
+      background-color: #ffffff; /* hijau lebih solid saat scroll */
+      backdrop-filter: blur(8px);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: rgb(51, 138, 51);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+    }
+
+    .nav-links a {
+      color: rgb(41, 122, 38);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #e0ffe0;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      min-height: 680px;
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)),
+                  url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80') center/cover no-repeat;
+      /* Alternatif: pakai gambar daun hijau close-up */
+      /* background-image: url('https://images.unsplash.com/photo-1618176983168-5b3d169f7e0f?auto=format&fit=crop&q=80&w=1974'); */
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      padding: 0 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      margin-bottom: 1.2rem;
+      font-weight: 800;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.2rem;
+      background-color: #2e8b57;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #3CB371;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    /* Spacer supaya konten tidak tertutup header */
+    .spacer {
+      height: 80px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    section {
+      margin: 6rem 0;
+      text-align: center;
+    }
+
+    h2 {
+      color: #1b5e20;
+      margin-bottom: 2rem;
+      font-size: 2.8rem;
+    }
+
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-top: 6rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Fixed -->
+  <header id="navbar">
+    <nav>
+      <div class="logo">DAURIN</div>
+      <div class="nav-links">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#produk">Produk</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <h1>Selamat Datang di Daurin!</h1>
+      <p>Produk Daur Ulang Sampah Plastik, Mari Selamatkan Bumi</p>
+      <a href="#produk" class="btn">Lihat Produk Kami</a>
+    </div>
+  </section>
+
+  <div class="spacer"></div>
+
+  <main>
+    <section id="tentang">
+      <h2>Tentang Kami</h2>
+      <p>Kami adalah komunitas/brand yang peduli lingkungan dengan mengolah sampah plastik menjadi barang bernilai guna tinggi.</p>
+      <p>Visi kami adalah menciptakan dunia yang lebih bersih dan berkelanjutan melalui daur ulang yang kreatif dan bermanfaat.</p>
+    </section>
+
+    <section id="produk">
+      <h2>Produk Kami</h2>
+      <p style="margin-bottom: 3rem;">(Bagian produk akan segera ditambahkan – tas, pot, paving block, dll)</p>
+      <!-- nanti bisa tambah grid produk di sini -->
+    </section>
+
+    <section id="kontak">
+      <h2>Hubungi Kami</h2>
+      <p>Email: hello@daurin.id<br>
+      WA: 0812-3456-7890<br>
+      Instagram: @daurin.id</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Daurin — Selamatkan Bumi dari Sampah Plastik</p>
+  </footer>
+
+  <script>
+    // Efek navbar berubah warna saat scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
