@@ -172,7 +172,7 @@
       font-size: 2.2rem;
       text-align: left;
     }
-    
+
     /*  TENTANG KAMI - BARU     */
     #tentang {
       background-color: #ffffff;
@@ -461,12 +461,14 @@
       border-radius: 10px;
     }
 
-    .video-container video {
+    .video-container iframe {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      border: 0;
+      border-radius: 10px;
     }
 
     #alat .produk-grid {
@@ -515,8 +517,7 @@
       transition: background-color 0.3s;
     }
 
-    .deta
-    il-btn:hover,
+    .detail-btn:hover,
     .buy-btn:hover {
       background-color: #2e8b57;
     }
@@ -686,9 +687,7 @@
       <h1>Tentang Alat</h1>
       <div class="produk-grid">
         <div class="produk-item">
-          <img
-            src="https://cdn.prod.website-files.com/5f85593f825a45ae8e699102/60377755389415811685922c_Sheetpress-machine-and-recycled-sheets.jpg"
-            alt="Alat Pengepresan">
+          <img src="assets/alat.jpg" alt="Alat Pengepresan">
           <h3>Alat Pengepresan</h3>
           <div class="button-group">
             <a href="#" class="detail-btn" data-target="detail1">Lihat Detail</a>
@@ -696,11 +695,13 @@
         </div>
       </div>
 
+      <!-- Ganti YOUR_FILE_ID dengan ID file Google Drive kamu -->
+      <!-- Cara mendapatkan ID: buka file di Google Drive, salin bagian dari URL:
+           https://drive.google.com/file/d/YOUR_FILE_ID/view
+           lalu tempel ID-nya di bawah -->
       <div class="video-container">
-        <video controls>
-          <source src="assets/comingsoon.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <iframe src="https://drive.google.com/file/d/1EP9q9o5Mg9Pa3r1dj6oPWcC5OEm_2ak6/preview" allow="autoplay" allowfullscreen>
+        </iframe>
       </div>
       <p>Panduan penggunaan alat pengepresan.</p>
     </section>
